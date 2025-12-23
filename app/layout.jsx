@@ -22,7 +22,30 @@ const syne = Syne({
 export const metadata = {
   title: "Formation d’anglais pour moniteurs de ski",
   description:
-    "Une formation pensée pour les moniteurs de ski qui veulent accélérer leurs carrières grâce à la maîtrise de l’anglais sur les pistes."
+    "Une formation pensée pour les moniteurs de ski qui veulent accélérer leurs carrières grâce à la maîtrise de l’anglais sur les pistes.",
+  metadataBase: new URL("https://www.educ-altitudes.com"),
+  openGraph: {
+    title: "Formation d’anglais pour moniteurs de ski",
+    description:
+      "Une formation pensée pour les moniteurs de ski qui veulent accélérer leurs carrières grâce à la maîtrise de l’anglais sur les pistes.",
+    url: "https://www.educ-altitudes.com/",
+    type: "website",
+    images: [
+      {
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Educ’Altitudes"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Formation d’anglais pour moniteurs de ski",
+    description:
+      "Une formation pensée pour les moniteurs de ski qui veulent accélérer leurs carrières grâce à la maîtrise de l’anglais sur les pistes.",
+    images: ["/og.jpg"]
+  }
 };
 
 export default function RootLayout({ children }) {

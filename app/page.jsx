@@ -74,7 +74,7 @@ export default function Home() {
               <span className="program__icon" aria-hidden="true">
                 <img src="/people.svg" alt="" />
               </span>
-              <span>Durée totale 24h</span>
+              <span>Durée totale 35h</span>
             </div>
           </div>
 
@@ -107,9 +107,47 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bootcamp" data-scroll-theme="dark">
+        <div className="bootcamp__inner">
+          <h2 className="bootcamp__title">Prochains Batch</h2>
+          <div className="bootcamp__grid">
+            <div className="bootcamp__card bootcamp__card--date">
+              <p className="bootcamp__date">lundi 19 janvier 2026</p>
+              <a className="bootcamp__cta" href="#" data-open-modal>
+                S&apos;inscrire
+              </a>
+            </div>
+            <div className="bootcamp__card bootcamp__card--price">
+              <p className="bootcamp__price">
+                <span className="bootcamp__price-value">1050€</span>
+                <span className="bootcamp__price-unit">HT</span>
+              </p>
+              <p className="bootcamp__contact">
+                07 XX XX XX XX
+              </p>
+              <ul className="bootcamp__list">
+                <li>6 modules e-learning “anglais moniteur”</li>
+                <li>Accès à la plateforme + mises à jour</li>
+                <li>Ateliers live (Q&amp;A + mises en situation)</li>
+                <li>Communauté moniteurs + ressources</li>
+                <li>Vocabulaire technique + psychologie client</li>
+                <li>Financement possible (OPCO / employeur)</li>
+              </ul>
+              <a className="bootcamp__reserve" href="#" data-open-modal>
+                Je réserve ma place
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="faq" id="faq" data-scroll-theme="dark">
         <div className="faq__inner">
-          <h2 className="faq__title">QUESTIONS FRÉQUEMMENT POSÉES</h2>
+          <h2 className="faq__title">
+            QUESTIONS
+            <br />
+            FRÉQUEMMENT&nbsp;POSÉES
+          </h2>
           <div className="faq__list">
             <details className="faq__item">
               <summary>
@@ -117,12 +155,12 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Non. La formation est pensée pour un planning de saison. Tu avances
-                  avec des modules courts (10-20 min) + des exercices terrain.
-                  Objectif : progresser régulièrement, sans &quot;devoirs
-                  scolaires&quot;.
-                </p>
+                <p className="faq__lead">Pensée pour un planning de saison :</p>
+                <ul className="faq__bullets">
+                  <li>Modules courts (10-20 min) faciles à caler.</li>
+                  <li>Exercices terrain entre deux cours.</li>
+                  <li>Progression régulière, sans &quot;devoirs scolaires&quot;.</li>
+                </ul>
               </div>
             </details>
 
@@ -132,12 +170,17 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Pas besoin d’être bilingue. Un niveau A1/A2 suffit pour démarrer :
-                  on part de phrases simples, claires, répétées, et adaptées au ski.
-                  Si tu es déjà B1/B2, tu iras plus vite et tu gagneras en fluidité
-                  + vocabulaire pro.
-                </p>
+                <p className="faq__lead">Pas besoin d’être bilingue :</p>
+                <ul className="faq__bullets">
+                  <li>
+                    Un niveau A1/A2 suffit pour démarrer, avec des phrases simples
+                    et adaptées au ski.
+                  </li>
+                  <li>
+                    Si tu es déjà B1/B2, tu progresses plus vite et tu gagnes en
+                    fluidité + vocabulaire pro.
+                  </li>
+                </ul>
               </div>
             </details>
 
@@ -147,11 +190,12 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  La formation coûte 1 180 €. Bonne nouvelle : la formation peut être
-                  financée via ton OPCO selon ton statut et ta situation. Des
-                  questions ? 07 XX XX XX XX
-                </p>
+                <p className="faq__lead">Tarif et financement :</p>
+                <ul className="faq__bullets">
+                  <li>La formation coûte 1 050 €.</li>
+                  <li>Financement possible via ton OPCO selon ton statut et ta situation.</li>
+                  <li>Questions ? 07 XX XX XX XX.</li>
+                </ul>
               </div>
             </details>
 
@@ -161,14 +205,14 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Concrètement, tu seras capable de : donner un cours en anglais du
-                  début à la fin (accueil, consignes, corrections) ; gérer un groupe
-                  + rassurer un client stressé ; expliquer la technique avec des mots
-                  simples (sans jargon) ; proposer la suite naturellement (cours
-                  privé, progression, planning). Le résultat attendu : plus de
-                  confiance, plus de fluidité, et plus d’opportunités de privé.
-                </p>
+                <p className="faq__lead">Concrètement, tu seras capable de :</p>
+                <ul className="faq__bullets">
+                  <li>Donner un cours en anglais du début à la fin (accueil, consignes, corrections).</li>
+                  <li>Gérer un groupe + rassurer un client stressé.</li>
+                  <li>Expliquer la technique avec des mots simples, sans jargon.</li>
+                  <li>Proposer la suite naturellement (cours privé, progression, planning).</li>
+                  <li>Résultat attendu : plus de confiance, plus de fluidité, et plus d’opportunités de privé.</li>
+                </ul>
               </div>
             </details>
 
@@ -178,11 +222,12 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Oui. C’est fait pour ça. Tu peux avancer le soir, entre deux
-                  journées, ou sur tes jours off. Tout est accessible en ligne, et
-                  tu peux reprendre exactement où tu t’es arrêté.
-                </p>
+                <p className="faq__lead">C’est fait pour un planning de saison :</p>
+                <ul className="faq__bullets">
+                  <li>Tu avances le soir, entre deux journées, ou sur tes jours off.</li>
+                  <li>Tout est accessible en ligne.</li>
+                  <li>Tu reprends exactement où tu t’es arrêté.</li>
+                </ul>
               </div>
             </details>
 
@@ -192,13 +237,17 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Oui. Tu peux le valoriser comme : &quot;Anglais professionnel –
-                  Moniteur de ski (communication client, sécurité, coaching, vente
-                  de prestations)&quot;. Et si tu passes l’évaluation finale, tu
-                  peux mentionner la certification/attestation associée (selon ton
-                  dispositif).
-                </p>
+                <p className="faq__lead">Tu peux la valoriser comme :</p>
+                <ul className="faq__bullets">
+                  <li>
+                    &quot;Anglais professionnel – Moniteur de ski (communication
+                    client, sécurité, coaching, vente de prestations)&quot;.
+                  </li>
+                  <li>
+                    Si tu passes l’évaluation finale, tu peux mentionner la
+                    certification/attestation associée (selon ton dispositif).
+                  </li>
+                </ul>
               </div>
             </details>
 
@@ -208,12 +257,11 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Oui, immédiatement. Chaque module te donne des &quot;scripts&quot;
-                  et phrases prêtes à l’emploi à utiliser dès ton prochain cours
-                  (collectif ou privé). Tu n’apprends pas de la théorie : tu
-                  t’entraînes sur des situations réelles de moniteur.
-                </p>
+                <p className="faq__lead">Dès le prochain cours :</p>
+                <ul className="faq__bullets">
+                  <li>Scripts et phrases prêtes à l’emploi pour collectif ou privé.</li>
+                  <li>Tu t’entraînes sur des situations réelles de moniteur, pas de théorie.</li>
+                </ul>
               </div>
             </details>
 
@@ -223,14 +271,13 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p>
-                  Une formation classique te fait travailler la grammaire et des
-                  sujets généraux. Ici, c’est 100% ski + terrain : consignes,
-                  sécurité, corrections, gestion de groupe ; psychologie client
-                  (peur, confiance, motivation) ; scripts &quot;client-ready&quot;
-                  pour accueillir et proposer la suite. Résultat : tu progresses
-                  plus vite parce que tu utilises tout dans la vraie vie.
-                </p>
+                <p className="faq__lead">Ici, c’est 100% ski + terrain :</p>
+                <ul className="faq__bullets">
+                  <li>Consignes, sécurité, corrections, gestion de groupe.</li>
+                  <li>Psychologie client (peur, confiance, motivation).</li>
+                  <li>Scripts &quot;client-ready&quot; pour accueillir et proposer la suite.</li>
+                  <li>Tu progresses plus vite parce que tu utilises tout dans la vraie vie.</li>
+                </ul>
               </div>
             </details>
           </div>

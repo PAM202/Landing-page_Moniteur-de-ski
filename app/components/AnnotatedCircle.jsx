@@ -25,7 +25,7 @@ export default function AnnotatedCircle({
       if (cancelled || !markRef.current) return;
 
       annotation = annotate(markRef.current, {
-        type: "circle",
+        type: "highlight",
         color,
         padding,
         strokeWidth,
