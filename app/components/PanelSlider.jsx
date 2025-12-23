@@ -5,15 +5,15 @@ import { useRef } from "react";
 const panels = [
   {
     icon: "speech",
-    title: "Donner un cours en anglais, sans réfléchir",
+    title: "Donner un cours en anglais, avec aisance",
     text:
-      "Maîtrisez les consignes clés, le rythme, et les formulations naturelles pour rester fluide sur la neige. Utilisez des scripts \"client-ready\"."
+      "Les consignes clés, le bon rythme, les tournures naturelles. Des phrases prêtes à dire pour rester fluide sur la neige."
   },
   {
     icon: "technique",
-    title: "Expliquer la technique comme un pro",
+    title: "Expliquer la technique avec précision",
     text:
-      "Appuis, pression, équilibre, rotation, posture : le vocabulaire + les phrases \"claires et courtes\" pour corriger efficacement, sans jargon."
+      "Appuis, équilibre, posture : le vocabulaire technique du ski et des phrases courtes pour faire progresser sur piste."
   },
   {
     icon: "territory",
@@ -143,9 +143,10 @@ export default function PanelSlider() {
     <section className="panels" id="resultats" data-scroll-theme="dark">
       <div className="panels__inner">
         <h2 className="panels__title">
-          CE QUE VOUS ALLEZ
-          <br />
-          MAÎTRISER APRÈS LA FORMATION
+          Ce que fait un moniteur
+          <br className="panels__title-break--desktop" />
+          <span className="panels__title-space" aria-hidden="true"> </span>
+          bilingue sur les pistes
         </h2>
 
         <div className="panels__carousel" aria-label="Programme de formation">

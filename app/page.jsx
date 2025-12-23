@@ -13,15 +13,20 @@ export default function Home() {
         <div className="hero__body">
           <div className="hero__content">
             <h1 className="hero__title">
-              <span>Obtenez plus</span>
-              <span className="hero__title-line">de cours de ski</span>
+              <span>Devenez</span>
+              <span className="hero__title-line">
+                <span className="hero__title-nowrap">
+                  moniteur{" "}
+                  <AnnotatedCircle>bilingue</AnnotatedCircle>
+                </span>
+              </span>
             </h1>
             <p className="hero__subtitle">
-              Une formation pensée pour les moniteurs de ski qui veulent accélérer
-              leurs carrières grâce à la maîtrise de l’anglais sur les pistes.
+              Une formation créée pour les moniteurs de ski qui veulent accélérer
+              leur carrière en maîtrisant l’anglais sur les{"\u00A0"}pistes.
             </p>
             <a className="hero__cta" href="#" data-open-modal>
-              Commencez à parler anglais
+              Je deviens moniteur bilingue
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -40,9 +45,9 @@ export default function Home() {
               VOS OBJECTIFS
             </h2>
             <p className="human__text">
-              Un parcours pragmatique pensé pour les moniteurs qui veulent
-              progresser vite. Une pédagogie claire, des exercices appliqués à
-              vos projets et un suivi personnalisé jusqu’à vos résultats.
+              Conçu pour les moniteurs en saison : vous pratiquez tout de suite,
+              avec des exercices terrain et un suivi personnalisé jusqu’aux
+              résultats.
             </p>
             <a className="human__link" href="#" data-open-modal>
               Réserver un rendez-vous
@@ -109,7 +114,7 @@ export default function Home() {
 
       <section className="bootcamp" data-scroll-theme="dark">
         <div className="bootcamp__inner">
-          <h2 className="bootcamp__title">Prochains Batch</h2>
+          <h2 className="bootcamp__title">Prochaine promotion</h2>
           <div className="bootcamp__grid">
             <div className="bootcamp__card bootcamp__card--date">
               <p className="bootcamp__date">lundi 19 janvier 2026</p>
@@ -290,17 +295,19 @@ export default function Home() {
           <h2 className="action__title">
             <span className="action__title-line">TRANSFORMEZ VOTRE</span>
             <span className="action__title-line">
-              <AnnotatedCircle
-                className="action__title-mark"
-                color="#ffbd00"
-                padding={8}
-                strokeWidth={2.5}
-                animationDuration={900}
-                delay={450}
-              >
-                CARRIÈRE
-              </AnnotatedCircle>
-              <span className="action__title-tail">GRÂCE À L’ANGLAIS</span>
+              <span className="action__title-nowrap">
+                <AnnotatedCircle
+                  className="action__title-mark"
+                  color="#ffbd00"
+                  padding={8}
+                  strokeWidth={2.5}
+                  animationDuration={900}
+                  delay={450}
+                >
+                  CARRIÈRE
+                </AnnotatedCircle>
+                <span className="action__title-tail">{" "}GRÂCE À L’ANGLAIS</span>
+              </span>
             </span>
           </h2>
           <p className="action__text">
