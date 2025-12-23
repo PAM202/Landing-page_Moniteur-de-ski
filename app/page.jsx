@@ -27,7 +27,6 @@ export default function Home() {
           </div>
         </div>
 
-        <img className="hero__waves" src="/waves_01.svg" alt="" aria-hidden="true" />
       </section>
 
       <PanelSlider />
@@ -114,7 +113,7 @@ export default function Home() {
           <div className="faq__list">
             <details className="faq__item">
               <summary>
-                <span>Est-ce que ça prend beaucoup de temps ?</span>
+                <span>Quel temps faut-il prévoir pour suivre la formation ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -129,7 +128,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Faut-il déjà être bon en anglais ?</span>
+                <span>Quel niveau d’anglais faut-il avoir ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -144,7 +143,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Combien coûte la formation ?</span>
+                <span>Quel est le tarif de la formation ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -158,7 +157,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Quels résultats concrets puis-je attendre ?</span>
+                <span>Quels résultats concrets la formation permet-elle d’obtenir ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -175,7 +174,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Je peux faire ça en parallèle du travail ?</span>
+                <span>Comment intégrer la formation à mon emploi du temps ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -189,7 +188,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Est-ce valorisable sur un CV ?</span>
+                <span>Comment la formation peut-elle être valorisée sur un CV ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -205,7 +204,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Je peux l’appliquer avec mes cours actuels ?</span>
+                <span>Comment l’appliquer dès mes cours actuels ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
@@ -220,7 +219,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>Différence avec une formation d’anglais classique ?</span>
+                <span>En quoi cette formation se distingue d’une formation d’anglais ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
