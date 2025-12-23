@@ -13,25 +13,25 @@ const panels = [
     icon: "technique",
     title: "Expliquer la technique avec précision",
     text:
-      "Appuis, équilibre, posture : le vocabulaire technique du ski et des phrases courtes pour faire progresser sur piste."
+      "Appuis, équilibre, posture : le vocabulaire technique du ski et des phrases courtes pour faire progresser le client sur les pistes."
   },
   {
     icon: "territory",
-    title: "Valoriser et promouvoir votre territoire",
+    title: "Valoriser et promouvoir le territoire",
     text:
       "Présenter une activité, un lieu ou un service avec aisance : raconter, recommander, donner envie, et transformer l’expérience en opportunité."
-  },
-  {
-    icon: "certificate",
-    title: "Un parcours certifiant et finançable OPCO",
-    text:
-      "Plateforme 24/7 + pédagogie active (mises en situation, jeux de rôle, cas réels). Formation finançable par votre OPCO."
   },
   {
     icon: "terrain",
     title: "Une méthode terrain, compatible saison",
     text:
       "Micro-leçons + mises en situation + répétition : vous progressez vite, même avec un planning chargé. Accès 24/7 + parcours guidé."
+  },
+  {
+    icon: "certificate",
+    title: "Un parcours certifiant et finançable",
+    text:
+      "Plateforme 24/7 + pédagogie active (mises en situation, jeux de rôle, cas réels). Formation finançable."
   }
 ];
 

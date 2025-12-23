@@ -13,17 +13,16 @@ export default function Home() {
         <div className="hero__body">
           <div className="hero__content">
             <h1 className="hero__title">
-              <span>Devenez</span>
+              <span className="hero__title-top">Parler anglais, c’est</span>
               <span className="hero__title-line">
                 <span className="hero__title-nowrap">
-                  moniteur{" "}
-                  <AnnotatedCircle>bilingue</AnnotatedCircle>
+                  remplir son <AnnotatedCircle>planning</AnnotatedCircle>
                 </span>
               </span>
             </h1>
             <p className="hero__subtitle">
-              Une formation créée pour les moniteurs de ski qui veulent accélérer
-              leur carrière en maîtrisant l’anglais sur les{"\u00A0"}pistes.
+              Formation dédiée aux moniteurs de ski qui souhaitent développer
+              leur activité grâce à l’anglais sur les{"\u00A0"}pistes.
             </p>
             <a className="hero__cta" href="#" data-open-modal>
               Je deviens moniteur bilingue
@@ -44,14 +43,6 @@ export default function Home() {
               <AnnotatedCircle>HUMAIN</AnnotatedCircle>, SUR-MESURE, CENTRÉ SUR
               VOS OBJECTIFS
             </h2>
-            <p className="human__text">
-              Conçu pour les moniteurs en saison : vous pratiquez tout de suite,
-              avec des exercices terrain et un suivi personnalisé jusqu’aux
-              résultats.
-            </p>
-            <a className="human__link" href="#" data-open-modal>
-              Réserver un rendez-vous
-            </a>
           </div>
           <div className="human__media">
             <img src="/skieur-action.png" alt="Moniteur de ski en action" />
@@ -114,7 +105,7 @@ export default function Home() {
 
       <section className="bootcamp" data-scroll-theme="dark">
         <div className="bootcamp__inner">
-          <h2 className="bootcamp__title">Prochaine promotion</h2>
+          <h2 className="bootcamp__title">Prochaine date</h2>
           <div className="bootcamp__grid">
             <div className="bootcamp__card bootcamp__card--date">
               <p className="bootcamp__date">lundi 19 janvier 2026</p>
