@@ -8,8 +8,35 @@ const REQUIRED_ENV = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "SMTP_
 function validateEnv() {
   const missing = REQUIRED_ENV.filter((key) => !process.env[key]);
   if (missing.length) {
-    throw new Error(`Missing SMTP configuration: ${missing.join(", ")}`);
+    const err = new Error(`Missing SMTP configuration: ${missing.join(", ")}`);
+    err.code = "MISSING_ENV";
+    throw err;
   }
+}
+
+function mapError(error) {
+  if (error?.code === "MISSING_ENV") {
+    return {
+      status: 500,
+      message: "Configuration SMTP incomplète côté serveur."
+    };
+  }
+
+  if (error?.code === "EAUTH") {
+    return {
+      status: 502,
+      message: "Authentification SMTP refusée (vérifier clé/mot de passe)."
+    };
+  }
+
+  if (["ESOCKET", "ECONNECTION", "ETIMEDOUT"].includes(error?.code)) {
+    return {
+      status: 504,
+      message: "Connexion au serveur SMTP impossible."
+    };
+  }
+
+  return { status: 500, message: "Impossible d'envoyer votre demande pour le moment." };
 }
 
 export async function POST(request) {
@@ -58,9 +85,10 @@ export async function POST(request) {
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Lead submission failed:", error);
+    const mapped = mapError(error);
     return NextResponse.json(
-      { error: "Impossible d'envoyer votre demande pour le moment." },
-      { status: 500 }
+      { error: mapped.message },
+      { status: mapped.status }
     );
   }
 }

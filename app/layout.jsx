@@ -45,6 +45,11 @@ export const metadata = {
     description:
       "Une formation pensée pour les moniteurs de ski qui veulent accélérer leurs carrières grâce à la maîtrise de l’anglais sur les pistes.",
     images: ["/og.jpg"]
+  },
+  icons: {
+    icon: "/logocarre.jpg",
+    apple: "/logocarre.jpg",
+    shortcut: "/logocarre.jpg"
   }
 };
 
