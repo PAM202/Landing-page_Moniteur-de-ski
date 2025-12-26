@@ -7,7 +7,8 @@ const menuLinks = [
   { label: "Formation", href: "#programme" },
   { label: "Résultats", href: "#resultats" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact" },
+  { label: "Se connecter", href: "https://app.educ-altitudes.com" }
 ];
 
 export default function HeroMenu() {

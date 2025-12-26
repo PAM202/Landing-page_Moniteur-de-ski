@@ -33,15 +33,91 @@ export default function Home() {
 
       </section>
 
+      <section className="testimonials" id="temoignages" data-scroll-theme="light">
+        <div className="testimonials__inner">
+          <h2 className="testimonials__title">
+            Ils ont suivi la formation, ils racontent
+          </h2>
+          <div className="testimonials__grid">
+            <figure className="testimonial">
+              <div className="testimonial__bubble">
+                <p className="testimonial__quote">
+                  En deux semaines j’étais capable d’accueillir et briefer mes groupes en anglais sans chercher mes mots.
+                </p>
+              </div>
+              <figcaption className="testimonial__meta">
+                <span className="testimonial__avatar" aria-hidden="true">C</span>
+                <div className="testimonial__person">
+                  <span className="testimonial__name">Claire, ESF Les Arcs</span>
+                  <span className="testimonial__role">Monitrice depuis 6 ans</span>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure className="testimonial">
+              <div className="testimonial__bubble">
+                <p className="testimonial__quote">
+                  Les scripts terrain sont prêts à l’emploi : check matériel, sécurité, corrections. Ça m’a fait gagner en confiance directe.
+                </p>
+              </div>
+              <figcaption className="testimonial__meta">
+                <span className="testimonial__avatar" aria-hidden="true">J</span>
+                <div className="testimonial__person">
+                  <span className="testimonial__name">Julien, Chamrousse</span>
+                  <span className="testimonial__role">Coach freeride</span>
+                </div>
+              </figcaption>
+            </figure>
+
+            <figure className="testimonial">
+              <div className="testimonial__bubble">
+                <p className="testimonial__quote">
+                  Je vends plus de cours privés grâce à l’anglais. Les parents me demandent spontanément d’accompagner leurs enfants toute la semaine.
+                </p>
+              </div>
+              <figcaption className="testimonial__meta">
+                <span className="testimonial__avatar" aria-hidden="true">S</span>
+                <div className="testimonial__person">
+                  <span className="testimonial__name">Sophie, Serre Chevalier</span>
+                  <span className="testimonial__role">Spécialiste enfants</span>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="insight" data-scroll-theme="light">
+        <div className="insight__inner">
+          <div className="insight__media">
+            <img src="/Olympic.jpg" alt="Moniteurs de ski souriants en station" />
+          </div>
+          <div className="insight__content">
+            <h3 className="insight__title">
+              La maîtrise de l’anglais n&apos;est plus une option.
+            </h3>
+            <p className="insight__text">
+              1 client sur 3 ne parle pas français.
+              L’anglais est aujourd’hui le levier n°1 pour remplir son planning et fidéliser une clientèle internationale.
+            </p>
+            <p className="insight__text">
+              &nbsp;
+            </p>
+            <p className="insight__text">
+              Et avec l’arrivée des JO 2030, cette dynamique internationale ne fera que s’accélérer dans les années à venir.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <PanelSlider />
 
       <section className="human" data-scroll-theme="dark">
         <div className="human__inner">
           <div className="human__content">
             <h2 className="human__title">
-              ACCOMPAGNEMENT{" "}
-              <AnnotatedCircle>HUMAIN</AnnotatedCircle>, SUR-MESURE, CENTRÉ SUR
-              VOS OBJECTIFS
+              Découvrez la formation 100% dédiée aux{" "}
+              <AnnotatedCircle>moniteurs de ski</AnnotatedCircle> avec au programme
             </h2>
           </div>
           <div className="human__media">
@@ -263,7 +339,7 @@ export default function Home() {
 
             <details className="faq__item">
               <summary>
-                <span>En quoi cette formation se distingue d’une formation d’anglais ?</span>
+                <span>En quoi cette formation se distingue-t-elle d’une formation d’anglais classique ?</span>
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">

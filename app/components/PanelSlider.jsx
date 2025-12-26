@@ -1,7 +1,5 @@
 "use client";
 
-import { useRef } from "react";
-
 const panels = [
   {
     icon: "speech",
@@ -20,18 +18,6 @@ const panels = [
     title: "Valoriser et promouvoir le territoire",
     text:
       "Présenter une activité, un lieu ou un service avec aisance : raconter, recommander, donner envie, et transformer l’expérience en opportunité."
-  },
-  {
-    icon: "terrain",
-    title: "Une méthode terrain, compatible saison",
-    text:
-      "Micro-leçons + mises en situation + répétition : vous progressez vite, même avec un planning chargé. Accès 24/7 + parcours guidé."
-  },
-  {
-    icon: "certificate",
-    title: "Un parcours certifiant et finançable",
-    text:
-      "Plateforme 24/7 + pédagogie active (mises en situation, jeux de rôle, cas réels). Formation finançable."
   }
 ];
 
@@ -130,15 +116,6 @@ const renderIcon = (type) => {
 };
 
 export default function PanelSlider() {
-  const trackRef = useRef(null);
-
-  const handleScroll = (direction) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const amount = track.clientWidth * 0.85;
-    track.scrollBy({ left: direction * amount, behavior: "smooth" });
-  };
-
   return (
     <section className="panels" id="resultats" data-scroll-theme="dark">
       <div className="panels__inner">
@@ -150,7 +127,7 @@ export default function PanelSlider() {
         </h2>
 
         <div className="panels__carousel" aria-label="Programme de formation">
-          <div className="panels__track" ref={trackRef}>
+          <div className="panels__track">
             {panels.map((panel) => (
               <article className="panel-card" key={panel.title}>
                 {panel.icon ? (
@@ -163,43 +140,6 @@ export default function PanelSlider() {
               </article>
             ))}
           </div>
-        </div>
-
-        <div className="panels__controls">
-          <button
-            className="panels__arrow"
-            type="button"
-            aria-label="Panneau précédent"
-            onClick={() => handleScroll(-1)}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M15 6l-6 6 6 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
-          <button
-            className="panels__arrow"
-            type="button"
-            aria-label="Panneau suivant"
-            onClick={() => handleScroll(1)}
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M9 6l6 6-6 6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </button>
         </div>
       </div>
     </section>
