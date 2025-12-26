@@ -1240,6 +1240,24 @@ body[data-scroll-theme="light"] .scroll-top {
   background: #001f4d;
 }
 
+.modal__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.modal__status {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+}
+
+.modal__status--success {
+  color: #0b7a34;
+}
+
+.modal__status--error {
+  color: #b3261e;
+}
+
 @media (min-width: 901px) {
   .page {
     position: relative;

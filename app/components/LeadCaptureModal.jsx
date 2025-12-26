@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 export default function LeadCaptureModal() {
   const [open, setOpen] = useState(false);
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState("");
   const firstInputRef = useRef(null);
 
   useEffect(() => {
@@ -43,6 +45,56 @@ export default function LeadCaptureModal() {
     }
   }, [open]);
 
+  useEffect(() => {
+    if (open) {
+      setStatus("idle");
+      setError("");
+    }
+  }, [open]);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = {
+      name: formData.get("name")?.toString().trim(),
+      email: formData.get("email")?.toString().trim(),
+      phone: formData.get("phone")?.toString().trim(),
+    };
+
+    if (!payload.name || !payload.email) {
+      setStatus("error");
+      setError("Merci de renseigner votre nom et votre email.");
+      return;
+    }
+
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Une erreur est survenue.");
+      }
+
+      setStatus("success");
+      form.reset();
+      firstInputRef.current?.focus();
+    } catch (err) {
+      setStatus("error");
+      setError(err.message);
+    }
+  };
+
   if (!open) {
     return null;
   }
@@ -78,9 +130,7 @@ export default function LeadCaptureModal() {
         <div className="modal__divider" aria-hidden="true" />
         <form
           className="modal__form"
-          onSubmit={(event) => {
-            event.preventDefault();
-          }}
+          onSubmit={handleSubmit}
         >
           <label className="modal__label" htmlFor="lead-name">
             Prénom et Nom
@@ -121,9 +171,19 @@ export default function LeadCaptureModal() {
             autoComplete="tel"
           />
 
-          <button className="modal__submit" type="submit">
-            Envoyer
+          <button className="modal__submit" type="submit" disabled={status === "loading"}>
+            {status === "loading" ? "Envoi..." : "Envoyer"}
           </button>
+          {status === "success" && (
+            <p className="modal__status modal__status--success">
+              Merci ! Votre demande a bien été envoyée.
+            </p>
+          )}
+          {status === "error" && (
+            <p className="modal__status modal__status--error">
+              {error || "Impossible d'envoyer votre demande."}
+            </p>
+          )}
         </form>
       </div>
     </div>
