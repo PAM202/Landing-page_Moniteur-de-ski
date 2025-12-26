@@ -728,7 +728,7 @@ body[data-scroll-theme="light"] .scroll-top {
   position: relative;
   background: linear-gradient(#ffffff 0 50%, #ffffff 50% 100%);
   color: #0a2f84;
-  padding: clamp(9rem, 16vh, 11rem) var(--gutter) clamp(5rem, 12vh, 7rem);
+  padding: clamp(9rem, 16vh, 11rem) var(--gutter) clamp(3rem, 8vh, 5rem);
   margin-top: 0;
   overflow: hidden;
 }
@@ -801,7 +801,7 @@ body[data-scroll-theme="light"] .scroll-top {
 .program {
   background: #ffffff;
   color: #002b6a;
-  padding: clamp(4.5rem, 10vh, 6rem) var(--gutter) clamp(4rem, 10vh, 6rem);
+  padding: clamp(3.5rem, 8vh, 4.5rem) var(--gutter) clamp(4rem, 10vh, 6rem);
 }
 
 .program__inner {

@@ -117,7 +117,7 @@ export default function Home() {
           <div className="human__content">
             <h2 className="human__title">
               Découvrez la formation 100% dédiée aux{" "}
-              <AnnotatedCircle>moniteurs de ski</AnnotatedCircle> avec au programme
+              <AnnotatedCircle>moniteurs de ski</AnnotatedCircle>
             </h2>
           </div>
           <div className="human__media">
@@ -128,7 +128,6 @@ export default function Home() {
 
       <section className="program" id="programme" data-scroll-theme="light">
         <div className="program__inner">
-          <h2 className="program__title">PROGRAMME</h2>
           <div className="program__stats">
             <div className="program__stat program__stat--workshops">
               <span className="program__icon" aria-hidden="true">
@@ -149,31 +148,32 @@ export default function Home() {
               <span>Durée totale 35h</span>
             </div>
           </div>
+          <h2 className="program__title">PROGRAMME</h2>
 
           <div className="program__list">
             <div className="program__row">
               <span className="program__module">Module 1</span>
-              <span className="program__topic">The International Instructor Era</span>
+              <span className="program__topic">L’anglais : le nouveau standard du moniteur</span>
             </div>
             <div className="program__row">
               <span className="program__module">Module 2</span>
-              <span className="program__topic">Teaching Kids to Ski</span>
+              <span className="program__topic">Enseigner le ski aux enfants</span>
             </div>
             <div className="program__row">
               <span className="program__module">Module 3</span>
-              <span className="program__topic">Teens & Adults: Coaching the Mindset</span>
+              <span className="program__topic">Adolescents & adultes : coacher l’état d’esprit</span>
             </div>
             <div className="program__row">
               <span className="program__module">Module 4</span>
-              <span className="program__topic">Mountain Language: Safety & Environment</span>
+              <span className="program__topic">Langage de la montagne : sécurité & environnement</span>
             </div>
             <div className="program__row">
               <span className="program__module">Module 5</span>
-              <span className="program__topic">Technical Progression & Group Management</span>
+              <span className="program__topic">Progression technique & gestion de groupe</span>
             </div>
             <div className="program__row">
               <span className="program__module">Module 6</span>
-              <span className="program__topic">Wrap-up, Role Plays & Certification</span>
+              <span className="program__topic">Conclusion, jeux de rôle & certification</span>
             </div>
           </div>
         </div>
