@@ -1274,7 +1274,7 @@ body[data-scroll-theme="light"] .scroll-top {
   text-transform: uppercase;
   letter-spacing: -0.05em;
   line-height: 1.24;
-  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-size: 18.75px;
   color: #002b6a;
 }
 
