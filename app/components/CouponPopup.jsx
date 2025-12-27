@@ -115,7 +115,7 @@ export default function CouponPopup() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: "Lead coupon -10%",
+          name: "Lead coupon -100€",
           email,
           phone: "",
         }),

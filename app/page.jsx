@@ -5,6 +5,7 @@ import HeroMenu from "./components/HeroMenu";
 import LeadCaptureModal from "./components/LeadCaptureModal";
 import PanelSlider from "./components/PanelSlider";
 import ScrollControls from "./components/ScrollControls";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -35,59 +36,7 @@ export default function Home() {
 
       </section>
 
-      <section className="testimonials" id="temoignages" data-scroll-theme="light">
-        <div className="testimonials__inner">
-          <h2 className="testimonials__title">
-            Ils ont suivi la formation, ils racontent
-          </h2>
-          <div className="testimonials__grid">
-            <figure className="testimonial">
-              <div className="testimonial__bubble">
-                <p className="testimonial__quote">
-                  En deux semaines j’étais capable d’accueillir et briefer mes groupes en anglais sans chercher mes mots.
-                </p>
-              </div>
-              <figcaption className="testimonial__meta">
-                <span className="testimonial__avatar" aria-hidden="true">C</span>
-                <div className="testimonial__person">
-                  <span className="testimonial__name">Claire, ESF Les Arcs</span>
-                  <span className="testimonial__role">Monitrice depuis 6 ans</span>
-                </div>
-              </figcaption>
-            </figure>
-
-            <figure className="testimonial">
-              <div className="testimonial__bubble">
-                <p className="testimonial__quote">
-                  Les scripts terrain sont prêts à l’emploi : check matériel, sécurité, corrections. Ça m’a fait gagner en confiance directe.
-                </p>
-              </div>
-              <figcaption className="testimonial__meta">
-                <span className="testimonial__avatar" aria-hidden="true">J</span>
-                <div className="testimonial__person">
-                  <span className="testimonial__name">Julien, Chamrousse</span>
-                  <span className="testimonial__role">Coach freeride</span>
-                </div>
-              </figcaption>
-            </figure>
-
-            <figure className="testimonial">
-              <div className="testimonial__bubble">
-                <p className="testimonial__quote">
-                  Je vends plus de cours privés grâce à l’anglais. Les parents me demandent spontanément d’accompagner leurs enfants toute la semaine.
-                </p>
-              </div>
-              <figcaption className="testimonial__meta">
-                <span className="testimonial__avatar" aria-hidden="true">S</span>
-                <div className="testimonial__person">
-                  <span className="testimonial__name">Sophie, Serre Che</span>
-                  <span className="testimonial__role">Spécialiste enfants</span>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       <section className="insight" data-scroll-theme="light">
         <div className="insight__inner">
@@ -187,7 +136,7 @@ export default function Home() {
           <div className="bootcamp__grid">
             <div className="bootcamp__dates">
               <div className="bootcamp__card bootcamp__card--date">
-                <span className="bootcamp__badge">-10%</span>
+                <span className="bootcamp__badge">-100€</span>
                 <p className="bootcamp__date">lundi 19 janvier 2026</p>
                 <div className="bootcamp__cta-row">
                   <a className="bootcamp__cta bootcamp__cta--small" href="#" data-open-modal>
@@ -207,11 +156,11 @@ export default function Home() {
             </div>
             <div className="bootcamp__card bootcamp__card--price">
               <p className="bootcamp__price">
-                <span className="bootcamp__price-value">1050€</span>
-                <span className="bootcamp__price-unit">HT</span>
+                <span className="bootcamp__price-value">1095€</span>
               </p>
               <p className="bootcamp__contact">
-                06 07 34 96 92
+                Des questions ?
+                <span className="bootcamp__phone">06 07 34 96 92</span>
               </p>
               <ul className="bootcamp__list">
                 <li>6 modules e-learning “anglais moniteur”</li>
@@ -224,6 +173,34 @@ export default function Home() {
               <a className="bootcamp__reserve" href="#" data-open-modal>
                 Je réserve ma place
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="qualiopi" data-scroll-theme="light">
+        <div className="qualiopi__inner">
+          <div className="qualiopi__content">
+            <p className="qualiopi__eyebrow">Certifié Qualiopi</p>
+            <h3 className="qualiopi__title">Certifié Qualiopi</h3>
+            <p className="qualiopi__text">
+              Éduc&apos;altitudes est un organisme de formation certifié Qualiopi. La certification Qualiopi atteste de
+              notre qualité du processus de formation (
+              <a className="qualiopi__link" href="#">
+                afficher notre certificat
+              </a>
+              ).
+            </p>
+            <p className="qualiopi__text">
+              Grâce à cette certification, les formations Éduc&apos;altitudes peuvent être prises en charge
+              financièrement par votre OPCO. Voici le{" "}
+              <a className="qualiopi__link" href="#" data-open-modal>
+                mode d&apos;emploi simplifié
+              </a>{" "}
+              pour financer jusqu&apos;à 900€ votre formation.
+            </p>
+            <div className="qualiopi__logo">
+              <img src="/logo-qualiopi.png" alt="Certification Qualiopi" />
             </div>
           </div>
         </div>
@@ -438,9 +415,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="footer__cert">
-            <img src="/logo-qualiopi.png" alt="Certification Qualiopi" />
           </div>
         </div>
       </footer>

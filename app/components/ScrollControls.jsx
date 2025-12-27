@@ -46,23 +46,33 @@ export default function ScrollControls() {
   }, []);
 
   return (
-    <button
-      ref={buttonRef}
-      className={`scroll-top${visible ? " scroll-top--visible" : ""}`}
-      type="button"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      aria-label="Revenir en haut"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M12 18V6m0 0l-5 5m5-5l5 5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    </button>
+    <>
+      <button
+        ref={buttonRef}
+        className={`scroll-cta${visible ? " scroll-cta--visible" : ""}`}
+        type="button"
+        data-open-modal
+        aria-label="Ouvrir la popup pour télécharger le programme"
+      >
+        Télécharger le programme
+      </button>
+      <button
+        className={`scroll-top${visible ? " scroll-top--visible" : ""}`}
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Revenir en haut"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 18V6m0 0l-5 5m5-5l5 5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </>
   );
 }
