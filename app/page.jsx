@@ -1,4 +1,6 @@
 import AnnotatedCircle from "./components/AnnotatedCircle";
+import CountdownTimer from "./components/CountdownTimer";
+import CouponPopup from "./components/CouponPopup";
 import HeroMenu from "./components/HeroMenu";
 import LeadCaptureModal from "./components/LeadCaptureModal";
 import PanelSlider from "./components/PanelSlider";
@@ -78,7 +80,7 @@ export default function Home() {
               <figcaption className="testimonial__meta">
                 <span className="testimonial__avatar" aria-hidden="true">S</span>
                 <div className="testimonial__person">
-                  <span className="testimonial__name">Sophie, Serre Chevalier</span>
+                  <span className="testimonial__name">Sophie, Serre Che</span>
                   <span className="testimonial__role">Spécialiste enfants</span>
                 </div>
               </figcaption>
@@ -181,13 +183,27 @@ export default function Home() {
 
       <section className="bootcamp" data-scroll-theme="dark">
         <div className="bootcamp__inner">
-          <h2 className="bootcamp__title">Prochaine date</h2>
+          <h2 className="bootcamp__title">Prochaines dates</h2>
           <div className="bootcamp__grid">
-            <div className="bootcamp__card bootcamp__card--date">
-              <p className="bootcamp__date">lundi 19 janvier 2026</p>
-              <a className="bootcamp__cta" href="#" data-open-modal>
-                S&apos;inscrire
-              </a>
+            <div className="bootcamp__dates">
+              <div className="bootcamp__card bootcamp__card--date">
+                <span className="bootcamp__badge">-10%</span>
+                <p className="bootcamp__date">lundi 19 janvier 2026</p>
+                <div className="bootcamp__cta-row">
+                  <a className="bootcamp__cta bootcamp__cta--small" href="#" data-open-modal>
+                    S&apos;inscrire
+                  </a>
+                  <CountdownTimer />
+                </div>
+              </div>
+              <div className="bootcamp__card bootcamp__card--date">
+                <p className="bootcamp__date">lundi 2 février 2026</p>
+                <div className="bootcamp__cta-row">
+                  <a className="bootcamp__cta bootcamp__cta--small" href="#" data-open-modal>
+                    S&apos;inscrire
+                  </a>
+                </div>
+              </div>
             </div>
             <div className="bootcamp__card bootcamp__card--price">
               <p className="bootcamp__price">
@@ -195,7 +211,7 @@ export default function Home() {
                 <span className="bootcamp__price-unit">HT</span>
               </p>
               <p className="bootcamp__contact">
-                07 XX XX XX XX
+                06 07 34 96 92
               </p>
               <ul className="bootcamp__list">
                 <li>6 modules e-learning “anglais moniteur”</li>
@@ -227,12 +243,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Pensée pour un planning de saison :</p>
-                <ul className="faq__bullets">
-                  <li>Modules courts (10-20 min) faciles à caler.</li>
-                  <li>Exercices terrain entre deux cours.</li>
-                  <li>Progression régulière, sans &quot;devoirs scolaires&quot;.</li>
-                </ul>
+                <p className="faq__lead">
+                  Cette formation a été conçue pour s&apos;adapter à un rythme saisonnier intense. Elle se compose de modules courts faciles à intégrer dans votre agenda. L&apos;apprentissage privilégie la mise en pratique immédiate sur le terrain sans avoir de &quot;devoirs&quot; à faire le soir.
+                </p>
               </div>
             </details>
 
@@ -242,17 +255,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Pas besoin d’être bilingue :</p>
-                <ul className="faq__bullets">
-                  <li>
-                    Un niveau A1/A2 suffit pour démarrer, avec des phrases simples
-                    et adaptées au ski.
-                  </li>
-                  <li>
-                    Si tu es déjà B1/B2, tu progresses plus vite et tu gagnes en
-                    fluidité + vocabulaire pro.
-                  </li>
-                </ul>
+                <p className="faq__lead">
+                  Non, la formation est accessible dès le niveau A1/A2, avec un apprentissage basé sur des phrases simples et ciblées.
+                </p>
               </div>
             </details>
 
@@ -266,7 +271,7 @@ export default function Home() {
                 <ul className="faq__bullets">
                   <li>La formation coûte 1 050 €.</li>
                   <li>Financement possible via ton OPCO selon ton statut et ta situation.</li>
-                  <li>Questions ? 07 XX XX XX XX.</li>
+                  <li>Questions ? 06 07 34 96 92.</li>
                 </ul>
               </div>
             </details>
@@ -277,13 +282,14 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Concrètement, tu seras capable de :</p>
+                <p className="faq__lead">
+                  À l&apos;issue de la formation, l&apos;apprenant sera en mesure de :
+                </p>
                 <ul className="faq__bullets">
-                  <li>Donner un cours en anglais du début à la fin (accueil, consignes, corrections).</li>
-                  <li>Gérer un groupe + rassurer un client stressé.</li>
-                  <li>Expliquer la technique avec des mots simples, sans jargon.</li>
-                  <li>Proposer la suite naturellement (cours privé, progression, planning).</li>
-                  <li>Résultat attendu : plus de confiance, plus de fluidité, et plus d’opportunités de privé.</li>
+                  <li>Dispenser une leçon en anglais dans son intégralité (accueil, consignes de sécurité, corrections).</li>
+                  <li>Encadrer un groupe et apaiser les clients stressés.</li>
+                  <li>Vulgariser la technique pour la rendre compréhensible par tous.</li>
+                  <li>Conseiller et vendre la suite de la progression (cours privés, réservation future).</li>
                 </ul>
               </div>
             </details>
@@ -294,12 +300,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">C’est fait pour un planning de saison :</p>
-                <ul className="faq__bullets">
-                  <li>Tu avances le soir, entre deux journées, ou sur tes jours off.</li>
-                  <li>Tout est accessible en ligne.</li>
-                  <li>Tu reprends exactement où tu t’es arrêté.</li>
-                </ul>
+                <p className="faq__lead">
+                  Le programme est spécifiquement conçu pour s&apos;adapter au rythme intense d&apos;une saison. Tout est accessible en ligne 24h/24 : vous pouvez avancer en soirée, entre deux cours ou lors de vos jours de repos. La plateforme sauvegarde votre progression automatiquement, vous permettant de reprendre exactement là où vous vous êtes arrêté.
+                </p>
               </div>
             </details>
 
@@ -309,17 +312,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Tu peux la valoriser comme :</p>
-                <ul className="faq__bullets">
-                  <li>
-                    &quot;Anglais professionnel – Moniteur de ski (communication
-                    client, sécurité, coaching, vente de prestations)&quot;.
-                  </li>
-                  <li>
-                    Si tu passes l’évaluation finale, tu peux mentionner la
-                    certification/attestation associée (selon ton dispositif).
-                  </li>
-                </ul>
+                <p className="faq__lead">
+                  Vous pouvez présenter cette compétence sous l&apos;intitulé : &quot;Anglais professionnel appliqué à l&apos;enseignement du ski (communication client, sécurité, pédagogie, vente)&quot;. Si vous validez l&apos;évaluation finale, n&apos;oubliez pas de mentionner l&apos;attestation ou la certification obtenue.
+                </p>
               </div>
             </details>
 
@@ -329,11 +324,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Dès le prochain cours :</p>
-                <ul className="faq__bullets">
-                  <li>Scripts et phrases prêtes à l’emploi pour collectif ou privé.</li>
-                  <li>Tu t’entraînes sur des situations réelles de moniteur, pas de théorie.</li>
-                </ul>
+                <p className="faq__lead">
+                  Oui, dès votre prochain cours. Vous disposez de scripts et de phrases clés prêts à l&apos;emploi, adaptés aux cours collectifs comme aux leçons particulières. L&apos;entraînement se base exclusivement sur des situations réelles d&apos;enseignement, sans théorie superflue.
+                </p>
               </div>
             </details>
 
@@ -343,13 +336,9 @@ export default function Home() {
                 <span className="faq__icon" aria-hidden="true">+</span>
               </summary>
               <div className="faq__answer">
-                <p className="faq__lead">Ici, c’est 100% ski + terrain :</p>
-                <ul className="faq__bullets">
-                  <li>Consignes, sécurité, corrections, gestion de groupe.</li>
-                  <li>Psychologie client (peur, confiance, motivation).</li>
-                  <li>Scripts &quot;client-ready&quot; pour accueillir et proposer la suite.</li>
-                  <li>Tu progresses plus vite parce que tu utilises tout dans la vraie vie.</li>
-                </ul>
+                <p className="faq__lead">
+                  Cette formation est 100% dédiée au &quot;terrain&quot;. Elle cible spécifiquement les consignes techniques, la sécurité, et la psychologie du client (gestion de la peur, motivation). Grâce à cette approche pragmatique, vous progressez plus vite car chaque notion apprise est immédiatement utile dans votre quotidien professionnel.
+                </p>
               </div>
             </details>
           </div>
@@ -363,17 +352,8 @@ export default function Home() {
             <span className="action__title-line">TRANSFORMEZ VOTRE</span>
             <span className="action__title-line">
               <span className="action__title-nowrap">
-                <AnnotatedCircle
-                  className="action__title-mark"
-                  color="#ffbd00"
-                  padding={8}
-                  strokeWidth={2.5}
-                  animationDuration={900}
-                  delay={450}
-                >
-                  CARRIÈRE
-                </AnnotatedCircle>
-                <span className="action__title-tail">{" "}GRÂCE À L’ANGLAIS</span>
+                <span className="action__title-mark">CARRIÈRE</span>{" "}
+                <span className="action__title-tail">GRÂCE À L’ANGLAIS</span>
               </span>
             </span>
           </h2>
@@ -400,13 +380,13 @@ export default function Home() {
               <p className="footer__heading">Informations</p>
               <ul className="footer__list">
                 <li>
-                  <a href="#">CGV</a>
+                  <a href="/cgv">CGV</a>
                 </li>
                 <li>
                   <a href="#">CGU</a>
                 </li>
                 <li>
-                  <a href="#">Mentions Légales</a>
+                  <a href="/mentions-legales">Mentions Légales</a>
                 </li>
                 <li>
                   <a href="#">Certification Qualiopi</a>
@@ -416,7 +396,7 @@ export default function Home() {
             <div className="footer__col">
               <p className="footer__heading">Contact</p>
               <ul className="footer__list">
-                <li>07 XX XX XX XX</li>
+                <li>06 07 34 96 92</li>
               </ul>
               <a className="footer__cta" href="#" data-open-modal>
                 <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -431,6 +411,32 @@ export default function Home() {
                 </svg>
                 Réserver un appel
               </a>
+              <div className="footer__socials">
+                <a
+                  className="footer__social-link"
+                  href="https://www.instagram.com/educaltitudes/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/Instagram_Glyph_White.svg" alt="Instagram EducAltitudes" />
+                </a>
+                <a
+                  className="footer__social-link"
+                  href="https://www.facebook.com/educaltitudes/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/Facebook_Logo_Secondary.png" alt="Facebook EducAltitudes" />
+                </a>
+                <a
+                  className="footer__social-link"
+                  href="https://www.linkedin.com/company/educ-altitudes/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/LinkedIn-Icon-Logo.wine.svg" alt="LinkedIn EducAltitudes" />
+                </a>
+              </div>
             </div>
           </div>
           <div className="footer__cert">
@@ -439,6 +445,7 @@ export default function Home() {
         </div>
       </footer>
 
+      <CouponPopup />
       <LeadCaptureModal />
       <ScrollControls />
     </main>
